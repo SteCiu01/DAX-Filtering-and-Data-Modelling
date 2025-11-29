@@ -11,7 +11,7 @@ Each code/use case is documented and organized by macro categories that I define
 |---------|-------------|------|
 | Filter by Measures | Control measure that allows users to filter visuals by quantitative measures (e.g., Total Amount) | [Link](https://github.com/SteCiu01/DAX/tree/main/DAX-Codes/Filter-by-Measures) |
 
-#### Virtual Table Measures: measures that relies on in-code virtual tables, and tat are used for complex/custom use cases
+#### Virtual Table Measures: measures that relies on in-code virtual tables, and that are used for complex/custom use cases
 
 | Topic | Description | Link |
 |---------|-------------|------|
