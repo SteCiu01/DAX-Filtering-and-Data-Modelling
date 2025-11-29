@@ -14,4 +14,6 @@ MEASURE 'Measures Table'[ColorBlack] = "#333333"
 MEASURE 'Measures Table'[ColorWhite] = "#f2f2f2"
 
 MEASURE 'Measures Table'[ColorGrey] = "#B3B3B3"
+
+MEASURE 'Measures Table'[ColorBlue] = "#86C4E6"
 ```
