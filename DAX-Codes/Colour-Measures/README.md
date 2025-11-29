@@ -1,8 +1,8 @@
-# Quick Color Measures for the Report
+# Quick Color Measures
 
-Here below some standard color measures that can be used in reports for some custom formatting logics.
+Here below some standard color measures that can be used to have easy access to colours when building custom formatting logics.
 
-You can use them as they are, or add more of them, or amend them with your colours. With the code below you can create them in bulk in the DAX query view:
+With the code below you can create them in bulk in the DAX query view. You just need to amend them to your colour needs. A piece of advice: always keep a transparent colour in your model as it can come handy.
 
 ```
 DEFINE
