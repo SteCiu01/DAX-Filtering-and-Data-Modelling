@@ -1,0 +1,37 @@
+FilterByAmount = 
+
+VAR Maxinput = SELECTEDVALUE('MaxAmount'[MaxAmount])
+VAR MinInput = SELECTEDVALUE(MinAmount[MinAmount])
+
+VAR PARENT_TotalPosition =  // roll-up to parent level to identify parent's IDs to be included
+CALCULATETABLE(
+    FILTER(
+        SUMMARIZE(
+            MyCompanyPositions,
+            MyCompanyPositions[Parent_ID],
+            "PARENT_TO_USE", SELECTEDVALUE(MyCompanyPositions[Parent_ID]),
+            "TotalPositionCID", SUM(MyCompanyPositions[Position_USD])
+        ),
+
+        [TotalPositionCID] >= MinInput && [TotalPositionCID] <= MaxInput
+        ),
+
+    // we need to remove CHILD_ID to properly roll-up to parent level (as this is the lower level of hierarchy in the matrix)
+    REMOVEFILTERS(MyCompanyPositions[Child_ID]) 
+)
+
+VAR PARENT_List = // create the list with selectcolumns function
+    SELECTCOLUMNS(
+        PARENT_TotalPosition,
+        "PARENT", [PARENT_TO_USE]
+    )
+
+VAR PARENT_Filtering = // give to the IDs in the list value of 1 (later in the matrix filters, we keep only what is 1)
+    IF(
+        SELECTEDVALUE(MyCompanyPositions[Parent_ID]) IN PARENT_List,
+        1,
+        0
+    )
+
+RETURN
+PARENT_Filtering
