@@ -4,14 +4,18 @@ With a simple control DAX measure is possible to filter an amount range using sl
 
 ## Situation
 
-Have you ever had a situation where you have a visual (e.g., a Matrix) with some categorical data (customer hierarchy) and a value (customer’s position), and had to dynamically filter only for those customers with a position within a range? This is possible using the Power BI default filter pane; however, it is not so immediate if you want to do this using slicers. Here, we are going to see how to quickly set this up.
+Have you ever had a situation where you have a visual (e.g., a Matrix) with some categorical data (customer hierarchy) and a value (customer’s position), and had to dynamically filter only for those customers with a position within a range? 
+
+This is possible using the Power BI default filter pane; however, it is not so immediate if you want to do this using slicers. Here, we are going to see how to quickly set this up.
 
 ## 0 - Starting point
 
 <img width="50%"  alt="image" src="https://github.com/user-attachments/assets/ad264200-3bc1-47d5-9009-d0abd652fd06" />
 <br><br>
 
-In the image above, there is our visual, and we want to set up a slicer that will let users decide which customers to keep in the visual based on a range of the Customer Total Position of their choice. For example, let’s imagine we want to keep only customers with a positive position; therefore, we would want to have in the visual only customers with Parent_IDs P4 and P1.
+In the image above, there is our visual, and we want to set up a slicer that will let users decide which customers to keep in the visual based on a range of the Customer Total Position of their choice. 
+
+Requirement: we **want to keep only customers (at parent level) with a positive position**; therefore, we would want to have in the visual only customers with Parent_IDs P4 and P1.
 
 ## 1 - Create 2 Tables (not connected to the data model) to use in the Slicers
 
@@ -55,6 +59,7 @@ CALCULATETABLE(
         ),
 
     // we need to remove CHILD_ID from being filtered in the visual to properly roll-up to parent level (as this is the lower level of hierarchy in the matrix)
+    // if we want to be able to choose the range for the child level we need to remove this ALLSELECTED
     ALLSELECTED(MyCompanyPositions[Child_ID]) 
 )
 
