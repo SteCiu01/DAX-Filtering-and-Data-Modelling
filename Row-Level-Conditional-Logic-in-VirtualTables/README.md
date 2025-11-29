@@ -1,4 +1,4 @@
-# Leverage in-measures virtual tables for complex calculations
+# Leverage in-measures virtual tables for complex row-level calculations
 
 Let's imagine you work in finance and you need to present in a matrix the following customers hierarchy:
 - Parent ID
