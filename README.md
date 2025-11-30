@@ -4,6 +4,6 @@ This repository contains a collection of DAX code snippets and DAX user-defined 
 
 All examples have been generalized, and each entry includes a short description of its use case.
 
-[🧮 DAX Codes](https://github.com/SteCiu01/DAX/tree/main/DAX-Codes)
+[🧮 DAX Codes](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/README.md)
 
-[🧩 DAX UDFs](https://github.com/SteCiu01/DAX/tree/main/DAX-UDFs)
+[🧩 DAX UDFs](https://github.com/SteCiu01/DAX/blob/main/DAX-UDFs/README.md)
