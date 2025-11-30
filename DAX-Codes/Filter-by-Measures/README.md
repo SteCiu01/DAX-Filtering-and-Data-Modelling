@@ -98,9 +98,13 @@ At this point, the whole filter by measure technique is done. We can now test it
 
 ## Let’s Test it!
 
-Selecting the range, only the P4 and P1 customers are visible in the visual (it worked!). Note: this approach, with the control measure above, works well regardless of other slicers that are applied. In the image below, it is possible to see how the range is selected only for the positions in GBP.
+Selecting the range [0, All Positive AMounts], only the P4 and P1 customers are visible in the visual (it worked!). 
 
 <img width="60%" alt="image" src="https://github.com/user-attachments/assets/9d10bfc7-feac-4193-b502-aaab2afc1e67" />
+
+Note: this approach, with the control measure above, works well regardless of other slicers that are applied. In the image below, it is possible to see how the range is selected only for the positions in GBP.
+
+<img width="60%" alt="image" src="https://github.com/user-attachments/assets/03823325-85c0-4cc3-b53a-f82c8d6486ee" />
 
 ## Possible Enhancement
 
