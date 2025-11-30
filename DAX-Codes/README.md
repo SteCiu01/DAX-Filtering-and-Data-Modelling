@@ -24,7 +24,7 @@ Measures to use within the visuals' filters. They let developers control what is
 |---------|-------------|------|
 | Slicers Filtering Other Slicers | Control measure that removes “dead” slicer values and avoids confusing blank visuals | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Slicer-Filtering-Other-Slicers/README.md) |
 | Filter by Measures | Control measure that allows users to filter visuals by quantitative measures (e.g., Total Amount) | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Filter-by-Measures/README.md) |
-| Top-N Selection| | |
+| Top-N Selection| Coming Soon | - |
 #### Virtual Table Measures
 
 These are calculations that rely on in-code virtual tables, and that are used for complex/custom use cases, that would not be possible to successfully achieve with simple measures.
