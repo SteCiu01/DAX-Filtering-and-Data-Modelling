@@ -5,20 +5,26 @@ It is designed as a reference library for building semantic models, to avoid goi
 
 Each code/use case is documented and organized by macro categories that I defined based on the code's nature and usage.
 
-#### Formatting Measures: measures to use when creating custom formatting logics
+#### Formatting
+
+Measures to use when creating custom formatting logics
 
 | Topic | Description | Link |
 |---------|-------------|------|
 | Colour Measures |  Easy access to colours when building custom formatting logics | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Colour-Measures/README.md) |
 
-#### Control Measures: measures to use within the visuals' filters
+#### Control
+
+Measures to use within the visuals' filters. They let developers control what is displayed in visuals
 
 | Topic | Description | Link |
 |---------|-------------|------|
 | Filter by Measures | Control measure that allows users to filter visuals by quantitative measures (e.g., Total Amount) | [Link](https://github.com/SteCiu01/DAX/tree/main/DAX-Codes/Filter-by-Measures) |
 | Slicers filtering other slicers | Control measure that removes “dead” slicer values and avoids confusing blank visuals | [Link](https://github.com/SteCiu01/DAX/tree/main/DAX-Codes/Slicer-Filtering-Other-Slicers) |
 
-#### Virtual Table Measures: measures that relies on in-code virtual tables, and that are used for complex/custom use cases
+#### Virtual Table Measures
+
+These are calculations that rely on in-code virtual tables, and that are used for complex/custom use cases, that would not be possible to successfully handle with simple measures.
 
 | Topic | Description | Link |
 |---------|-------------|------|
