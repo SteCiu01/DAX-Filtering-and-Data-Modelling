@@ -1,4 +1,4 @@
-# Virtual Tables for Distinct Combinations Count
+# Virtual Tables for counting distinnct combinations of items
 
 Let'simagine we have the facts_sales_table as below:
 
@@ -17,14 +17,16 @@ Let'simagine we have the facts_sales_table as below:
 
 This situation shows that a customer can purchase different services and each service has some configuarations as well. 
 
-The business consider 1 opportunity as the combination of customer - service. So for instance, in the table above the customer 1 generates 2 ops: a and b, the customer 2 generates also 2 ops: a and c and finally customer c generates 3 ops: a, b and c. The total number of what is considered an oportunity is 7. 
+The management considers 1 opportunity as the combination of customer - service. So for instance, in the table above the customer 1 generates 2 ops: a and b, the customer 2 generates also 2 ops: a and c and finally customer 3 generates 3 ops: a, b and c. The total number of what is considered an oportunity is 7. 
 
 Here virtual tables come in handy as they let you create the "ops ids" and then count them. 
 
 Here how to proceed:
 
 ```
-Opportunities = 
+Opportunities =
+
+VAR virtTable =
   SUMMARIZE(
         facts_sales_table,
         FactTable[customer_id],
@@ -33,6 +35,6 @@ Opportunities =
 
 RETURN
 COUNTROWS(
-   facts_sales_table 
+   virtTable 
 )
 ```
