@@ -17,6 +17,16 @@ Measures to use when creating custom formatting logics
 | Dynamic Visuals Headers |  Visual header that change based on slicers selection | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Dynamic-Visuals-Headers/README.md) |
 | In-Measure SVGs | Use SVG images within measures to enhance your visualisations | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/In-Measure-SVGs/README.md) |
 
+#### Time Intelligence
+
+Collection of few important time intelligence measures together with and optimised simple calendar table that guarantees them to work properly.
+
+In fact, a pre-requisite for time intelligence functions to work is to have a calendar table with a dates column where no day is missing from day start to day end.
+
+| Topic | Description | Link |
+|---------|-------------|------|
+| Create the Calendar Table | M-Code for creating a complete calendar table for the semantic model. Includes a future day for proper SPLY functions | [Link]() |
+
 #### Control
 
 Measures to use within the visuals' filters. They let developers control what is displayed in the visuals
