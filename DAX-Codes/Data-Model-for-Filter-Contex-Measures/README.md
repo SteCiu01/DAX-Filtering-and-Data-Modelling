@@ -28,3 +28,6 @@ We also have the Dim_Customers table:
 | c          | cust_c        |
 | d          | cust_d        |
 
+### Goal: two measures: [Number of POs] and [Number of POs today]
+
+The [Number of POs] is a simple measure
