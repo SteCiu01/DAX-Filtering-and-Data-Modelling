@@ -1,4 +1,4 @@
-# Data Model for Filter Contex
+# Data Model for Filter Contex Measures
 
 Using slicers based on some columns of a fact table can be generally acceptable if you don't have a specific Dim table, however there is to be careful when you want to use that same column also within a filter context measure.
 
