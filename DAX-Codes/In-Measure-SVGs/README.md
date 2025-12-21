@@ -22,15 +22,15 @@ VAR _Sales_PM = [Sales_PM]
 
 VAR _Sales_CM = [Sales_CM]
 
-VAR Differencial =
+VAR Differential =
 _Sales_CM - _Sales_PM
 
 VAR Arrows = 
 IF(
-  VALUE(Differencial) > 0, 
+  VALUE(Differential) > 0, 
   [Arrow_UP],
     IF(
-      VALUE(Differencial) < 0, 
+      VALUE(Differential) < 0, 
       [Arrow_Down], 
       BLANK()
       )
