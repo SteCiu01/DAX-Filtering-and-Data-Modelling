@@ -29,7 +29,8 @@ TopN_Customers_Filter =
 VAR TopNValue = 
     SELECTEDVALUE('Parameter_TopN'[Top-N Value])
 
-// The virtual table needs to replicate the hierarchical categorical structure of the visual for which you want to set up the Top-N filtering.
+/* The virtual table needs to replicate the hierarchical categorical structure of the visual
+for which you want to set up the Top-N filtering.*/
 
 VAR _virt_table =
     CALCULATETABLE(
