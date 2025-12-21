@@ -194,7 +194,6 @@ When you filter a fact table column (days_old = 1) in a slicer, it doesn't just 
 
 Lookup_Days
 
-```
 | days_old |
 |----------|
 | 0        |
@@ -203,7 +202,6 @@ Lookup_Days
 | 4        |
 | 9        |
 | 12       |
-```
 
 ### Step 2: Update Data Model
 
