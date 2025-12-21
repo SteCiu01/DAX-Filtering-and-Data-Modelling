@@ -209,7 +209,7 @@ Lookup_Days
 
 **New Model:** 
 
-Dim_Customer [1] → [*] facts_po_data [*] ← [1] Lookup_Days
+Dim_Customer [ 1 ] → [ * ] facts_po_data [ * ] ← [ 1 ] Lookup_Days
 
 Both dimension tables connect to the fact table via one-to-many relationships.
 
