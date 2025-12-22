@@ -45,9 +45,10 @@ Measures to use within the visuals or in control/navigation buttons. They let de
 | Topic | Description | Link |
 |---------|-------------|------|
 | Slicers Filtering Other Slicers | Control measure that removes “dead” slicer values and avoids confusing blank visuals | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Slicer-Filtering-Other-Slicers/README.md) |
+| Measures Filtering Slicers | Align visuals and slicers to avoid slicers to display values that are filtered out in visuals | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Measures-Filtering-Slicers/README.md) |
 | Filter by Measures | Control measure that allows users to filter visuals by quantitative measures (e.g., Total Amount) | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Filter-by-Measures/README.md) |
 | Dynamic Top-N Selection| Build a slicer where you can type in a number (N) and this slicer would make you show in your visual the Top-N customers by a measure | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Top-N-Selection/README.md) |
-|Page-Level Access Control in Power BI (UI-Based) | Prevent non-authorized users from navigating to a certain page and redirect them to a dedicated access request page. | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Page-Level-Security/README.md) |
+| Page-Level Access Control in Power BI (UI-Based) | Prevent non-authorized users from navigating to a certain page and redirect them to a dedicated access request page. | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Page-Level-Security/README.md) |
 
 #### Virtual Tables
 
