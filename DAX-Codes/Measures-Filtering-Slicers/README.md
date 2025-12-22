@@ -21,7 +21,7 @@ The result is:
 | Product A | 125 | 560 |
 | Product C | 265 | 1,240 |
 
-However, if we have a slicer for Products or for any oter Products-related categories (e.g., Product Category, Sub-Products, etc.), anything related to Product B will be still visible in the slicer/s. 
+However, if we have a slicer for Products or for any other Products-related categories (e.g., Product Category, Sub-Products, etc.), anything related to Product B will be still visible in the slicer/s. 
 
 We need to replicate the operation and drop the measure [Total Returns] in the slicer/s visual filter section and set it as "IS NOT BLANK".
 
