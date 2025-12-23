@@ -1,6 +1,6 @@
 ## 🧮 DAX Codes & Best Practices
 
-This repository is a curated collection of my most frequently used and production-tested DAX codes, together with data modelling and filtering best practices, related to DAX.
+Collection of my most frequently used and production-tested DAX codes, together with data modelling and filtering best practices, related to DAX.
 
 It is designed as my reference library for building semantic models and reports, to avoid going every time in previous models to retrieve old expressions.
 
