@@ -1,4 +1,4 @@
-# Conditional Colour Based on Slicer Selection
+# Conditional Colour Driven by Slicer Selection
 
 ### Simple Scenarios Templates
 
