@@ -1,5 +1,7 @@
 # Dynamic Top-N Selection
 
+Enable users to filter visuals dynamically based on quantitative measures (e.g. revenue, margin, volume).
+
 **Requirements**
 
 - You have a visual (bar chart) with on the y-axis the column [Customer Name] and on the x-axis the measure [Total Sales]
