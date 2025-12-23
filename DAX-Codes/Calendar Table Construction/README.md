@@ -1,6 +1,6 @@
-# Calendar Table for the semantic model
+# Calendar Table Construction
 
-Below the full m-code to create a complete calendar table to use in the semantic model.
+Power Query (M) code to generate a complete calendar table for the semantic model, including a future date for proper SPLY calculations.
 
 ```
 let
