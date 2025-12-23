@@ -4,7 +4,7 @@ Collection of my most frequently used and production-tested DAX codes, together 
 
 It is designed as my reference library for building semantic models and reports, to avoid going every time in previous models to retrieve old expressions.
 
-Each code/use case is documented and organized by macro categories that I defined based on the code's nature and usage.
+Each topic is documented and organized by macro categories that I defined based on the topic's nature and usage.
 
 ---
 
