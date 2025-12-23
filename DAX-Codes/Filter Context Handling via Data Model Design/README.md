@@ -296,4 +296,4 @@ Number of POs today = 3 (CORRECT)
 **The key insight:** 
 
 - Separate dimension tables create isolated filter contexts. Each dimension can be manipulated independently without creating row-level dependencies in the fact table.
-- Never use fact table columns in both slicers AND CALCULATE filter manipulations. Always create a dimension table to isolate the filter context.
+- Never use fact table columns in both slicers and CALCULATE filter manipulations. Always create a dimension table to isolate the filter context.
