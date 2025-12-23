@@ -1,4 +1,6 @@
-# Make Slicers Filter Each Other Based on Available Data
+# Slicers Filtering Other Slicers
+
+Use control measures to remove invalid slicer values and prevent misleading or empty visuals.
 
 ### Basic Situation: in the data model you have a fact table, and several dim tables
 
