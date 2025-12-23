@@ -1,4 +1,4 @@
-# Filter a visual by the amount range of a measure
+# Visual Filtering by Measures
 
 With a DAX control measure is possible to filter an amount range using slicers, in a Power BI report.
 
