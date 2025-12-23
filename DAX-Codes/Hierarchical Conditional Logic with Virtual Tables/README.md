@@ -1,4 +1,6 @@
-# Leverage in-code virtual tables for complex row-level calculations
+# Hierarchical Conditional Logic with Virtual Tables
+
+Apply conditional logic at a controlled hierarchical granularity using virtual tables and iterators.
 
 Let's imagine you need to present in a matrix the following customers hierarchy:
 - Parent ID
