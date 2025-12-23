@@ -1,4 +1,4 @@
-# Filter Context and Data Model Design
+# Filter Context Handling via Data Model Design
 
 ### The Problem: Direct Fact Table Filtering
 
