@@ -14,7 +14,7 @@ DAX techniques for implementing advanced and reusable custom formatting logic in
 
 | Topic | Description | Link |
 |---------|-------------|------|
-| Colour Measures | Centralised colour measures to standardise and reuse colour logic across conditional formatting scenarios | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Colour%20Measures/README.md) |
+| Quick Colour Measures | Centralised colour measures to standardise and reuse colour logic across conditional formatting scenarios | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Colour%20Measures/README.md) |
 | Conditional Colour Driven by Slicer Selection | Apply dynamic colour formatting based on slicer-driven user selections | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Conditional%20Colour%20Driven%20by%20Slicer%20Selection/README.md) |
 | Traffic Light Target Indicators | Create traffic-light style indicators in tables and matrix visuals based on measure thresholds | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Traffic%20Light%20Target%20Indicators/README.md) |
 | Top-N / Bottom-N Conditional Colouring | Use RANKX-based logic to highlight Top-N or Bottom-N categories via conditional formatting | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Top-N%20-%20Bottom-N%20Conditional%20Colouring/README.md) |
