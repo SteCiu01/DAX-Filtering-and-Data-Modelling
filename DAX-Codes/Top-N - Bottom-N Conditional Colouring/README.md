@@ -1,4 +1,6 @@
-## Complex Full Scenario using RANKX for highlighting TOP-N or BOTTOM-N categories
+# Top-N / Bottom-N Conditional Colouring
+
+Use RANKX-based logic to highlight Top-N or Bottom-N categories via conditional formatting
 
 Starting from this bar chart
 
