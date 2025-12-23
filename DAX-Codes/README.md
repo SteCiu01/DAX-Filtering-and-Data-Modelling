@@ -41,8 +41,8 @@ A complete and contiguous calendar table is a prerequisite for correct time inte
 
 | Topic | Description | Link |
 |---------|-------------|------|
-| Calendar Table Construction | Power Query (M) code to generate a complete calendar table for the semantic model, including a future date for proper SPLY calculations | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Create-Calendar-Table/README.md) |
-| Reusable Time Intelligence Measures | A collection of commonly used time intelligence measures, ready to be imported via DAX Query View | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Handy-Time-Intelligence-Functions/README.md) |
+| Calendar Table Construction | Power Query (M) code to generate a complete calendar table for the semantic model, including a future date for proper SPLY calculations | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Calendar%20Table%20Construction/README.md) |
+| Reusable Time Intelligence Measures | A collection of commonly used time intelligence measures, ready to be imported via DAX Query View | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Reusable%20Time%20Intelligence%20Measures/README.md) |
 
 ---
 
