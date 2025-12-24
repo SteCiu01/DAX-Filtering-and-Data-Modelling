@@ -15,7 +15,7 @@ let
     InsertedDay = Table.AddColumn(InsertedMonth, "Day Number", each Date.Day([Date Column]), type nullable number),
     InsertedMonthName = Table.AddColumn(InsertedDay, "Month Name", each Date.MonthName([Date Column]), type nullable text),
     AddedQuarterName = Table.TransformColumnTypes(Table.AddColumn(InsertedMonthName, "Quarter Name", each "Q" & Number.ToText([Quarter Number])), {{"Quarter Name", type text}}),
-    Is_Future_Day = Table.AddColumn(AddedQuarterName, "Is Future Day", each if [Date Column] = DateTime.Date(DateTime.LocalNow() + #duration(1, 0, 0, 0)) then "Yes" else "No", type text)
+    Is_Future_Day = Table.AddColumn(AddedQuarterName, "Is Future Day", each if [Date Column] = EndDate then "Yes" else "No", type text)
 in
     Is_Future_Day
 ```
