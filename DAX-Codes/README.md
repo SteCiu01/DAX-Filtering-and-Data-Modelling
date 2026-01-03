@@ -20,7 +20,7 @@ DAX techniques for implementing advanced and reusable custom formatting logic in
 | Top-N / Bottom-N Conditional Colouring | Use RANKX-based logic to highlight Top-N or Bottom-N categories via conditional formatting | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Top-N%20-%20Bottom-N%20Conditional%20Colouring/README.md) |
 | Dynamic Visual Headers | Generate visual titles and headers that automatically adapt to slicer selections | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Dynamic%20Visuals%20Headers/README.md) |
 | SVG Rendering Inside Measures | Embed SVG images directly in DAX measures to enrich visuals with custom icons and indicators | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/SVG%20Rendering%20Inside%20Measures/README.md) |
-| Label Format Measures | Technique to gain maximum customization and flexibility for what displayed in data labels, getting rid of the Auto, Thousands, Million, etc.. default settings | [Link](https://github.com/SteCiu01/DAX-Filtering-and-Data-Modelling/blob/main/DAX-Codes/Label%20Format%20Measures/README.md) |
+| Label Format Measures | Technique to achieve maximum customization and full control over data-label display, completely replacing the default Auto / Thousands / Millions behavior | [Link](https://github.com/SteCiu01/DAX-Filtering-and-Data-Modelling/blob/main/DAX-Codes/Label%20Format%20Measures/README.md) |
 
 ---
 
