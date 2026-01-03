@@ -161,6 +161,6 @@ Output:
 
 You can have both millions and thousands for the same measure and this comes very handy in situations where you have very big differences.
 
-For instance imagine one month you have 40K and all the others are on millions scale, and you set up decimal 1.
+For instance imagine one month you have 40K and all the others are on millions scale, and you set up 1 decimal to display.
 - Using the value formatting available in the visuals formatting you would have something like: 2.4M, 1.2M, 0.0M 
 - Using this new formatting technique you would have: 2.4M, 1.2M, 40.2K
