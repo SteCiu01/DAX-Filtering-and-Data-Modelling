@@ -40,6 +40,8 @@ SWITCH(
 
 When using the column 'Measure' from the parameter table in a slicer we can call either Total Sales $ or Total Sales Qty, however, one measure needs to be formattedd as whole number and the other one as currency. 
 
+<hr>
+
 ### Two Possible Solutions
 
 <hr>
