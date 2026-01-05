@@ -2,7 +2,7 @@
 
 Technique to achieve maximum customization and full control over data-label display, completely replacing the default Auto / Thousands / Millions behavior.
 
-### Situation: 
+### Situation
 
 <hr>
 
@@ -43,8 +43,6 @@ When using the column 'Measure' from the parameter table in a slicer we can call
 <hr>
 
 ### Two Possible Solutions
-
-<hr>
 
 #### 🔣 Option 1: Dynamic Formatting
 
