@@ -395,3 +395,30 @@ SWITCH (
 )
 ```
 
+**🔣 Percentage Variance Formatting**
+
+Formatting code for percentage variations using "+" and "-" before the percentage. 
+
+This code covers from situations where the Delta is so small that negative percentages like -0.00001% are perceived as 0 and formatted with as positive in a typical string like: ```FORMAT(_pct, "+0.0%; -0.0%; +0.0%")```
+
+```
+Δ_%_vs_SPLY_Format = 
+VAR _delta = [Actual] - [SPLY]
+VAR _pct =
+    DIVIDE(
+        _delta,
+        [SPLY],
+        BLANK()
+    )
+RETURN
+SWITCH(
+    TRUE(),
+    _delta > 0,
+        FORMAT(_pct, "+0.0%; +0.0%; +0.0%"),
+    _delta < 0,
+        FORMAT(_pct, "-0.0%; -0.0%; -0.0%"),
+    ABS(_delta) < 1e-6,
+        FORMAT(_pct, "0.0%; 0.0%; 0.0%")
+)
+```
+
