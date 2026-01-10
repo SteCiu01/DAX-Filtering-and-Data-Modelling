@@ -292,7 +292,7 @@ VAR _Order =
     SELECTEDVALUE ( 'IBCS-Column-Chart-Measures-Selector'[Order] )
 
 VAR _Value =
-    [ Actual]-[SPLY]
+    [Actual]-[SPLY]
 
 VAR AbsValue =
     ABS ( _Value )
