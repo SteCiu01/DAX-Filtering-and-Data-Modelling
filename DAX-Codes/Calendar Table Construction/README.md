@@ -4,20 +4,176 @@ Power Query (M) code to generate a complete calendar table for the semantic mode
 
 ```
 let
-    StartDate = #date(2023, 1, 1),
-    EndDate = DateTime.Date(DateTime.LocalNow() + #duration(1, 0, 0, 0)),
-    DateList = List.Dates(StartDate, Duration.Days(EndDate - StartDate) + 1, #duration(1, 0, 0, 0)),
-    DateTable = Table.FromList(DateList, Splitter.SplitByNothing(), {"Date Column"}, null, ExtraValues.Error),
-    ChangedType = Table.TransformColumnTypes(DateTable,{{"Date Column", type date}}),
-    InsertedYear = Table.AddColumn(ChangedType, "Year", each Date.Year([Date Column]), Int64.Type),
-    InsertedQuarter = Table.AddColumn(InsertedYear, "Quarter Number", each Date.QuarterOfYear([Date Column]), type nullable number),
-    InsertedMonth = Table.AddColumn(InsertedQuarter, "Month Number", each Date.Month([Date Column]), type nullable number),
-    InsertedDay = Table.AddColumn(InsertedMonth, "Day Number", each Date.Day([Date Column]), type nullable number),
-    InsertedMonthName = Table.AddColumn(InsertedDay, "Month Name", each Date.MonthName([Date Column]), type nullable text),
-    AddedQuarterName = Table.TransformColumnTypes(Table.AddColumn(InsertedMonthName, "Quarter Name", each "Q" & Number.ToText([Quarter Number])), {{"Quarter Name", type text}}),
-    Is_Future_Day = Table.AddColumn(AddedQuarterName, "Is Future Day", each if [Date Column] = EndDate then "Yes" else "No", type text)
+    // ============================================================
+    // PARAMETERS
+    // ============================================================
+    StartDate =
+        #date(2023, 1, 1),
+
+    EndDate =
+        DateTime.Date(
+            DateTime.LocalNow() + #duration(1, 0, 0, 0)
+        ),
+
+    // ============================================================
+    // DATE GENERATION
+    // ============================================================
+    DateList =
+        List.Dates(
+            StartDate,
+            Duration.Days(EndDate - StartDate) + 1,
+            #duration(1, 0, 0, 0)
+        ),
+
+    DateTable =
+        Table.FromList(
+            DateList,
+            Splitter.SplitByNothing(),
+            {"Date Column"},
+            null,
+            ExtraValues.Error
+        ),
+
+    ChangedType =
+        Table.TransformColumnTypes(
+            DateTable,
+            {{"Date Column", type date}}
+        ),
+
+    // ============================================================
+    // DATE ATTRIBUTES
+    // ============================================================
+    InsertedYear =
+        Table.AddColumn(
+            ChangedType,
+            "Year",
+            each Date.Year([Date Column]),
+            Int64.Type
+        ),
+
+    InsertedQuarter =
+        Table.AddColumn(
+            InsertedYear,
+            "Quarter Number",
+            each Date.QuarterOfYear([Date Column]),
+            type nullable number
+        ),
+
+    InsertedMonth =
+        Table.AddColumn(
+            InsertedQuarter,
+            "Month Number",
+            each Date.Month([Date Column]),
+            type nullable number
+        ),
+
+    InsertedDay =
+        Table.AddColumn(
+            InsertedMonth,
+            "Day Number",
+            each Date.Day([Date Column]),
+            type nullable number
+        ),
+
+    InsertedMonthName =
+        Table.AddColumn(
+            InsertedDay,
+            "Month Name",
+            each Date.MonthName([Date Column]),
+            type nullable text
+        ),
+
+    AddedQuarterName =
+        Table.TransformColumnTypes(
+            Table.AddColumn(
+                InsertedMonthName,
+                "Quarter Name",
+                each "Q" & Number.ToText([Quarter Number])
+            ),
+            {{"Quarter Name", type text}}
+        ),
+
+    // ============================================================
+    // FLAGS
+    // ============================================================
+    Is_Future_Day =
+        Table.AddColumn(
+            AddedQuarterName,
+            "Is Future Day",
+            each if [Date Column] = EndDate then "Yes" else "No",
+            type text
+        ),
+
+    // ============================================================
+    // MONTH RANK LOGIC
+    // Assigns sequential rank to each Year–Month combination
+    // Useful for Top-N month filtering without relative date filters
+    // ============================================================
+    Year_Month_Group =
+        Table.Group(
+            Is_Future_Day,
+            {"Year", "Month Number"},
+            {
+                {
+                    "Table",
+                    each _,
+                    type nullable table[
+                        #"Date Column" = nullable date,
+                        Year = Int64.Type,
+                        #"Quarter Number" = nullable number,
+                        #"Month Number" = nullable number,
+                        #"Day Number" = nullable number,
+                        #"Month name" = nullable text,
+                        #"Quarter Name" = nullable text,
+                        #"Is Last Day" = nullable text
+                    ]
+                }
+            }
+        ),
+
+    Add_Month_Rank =
+        Table.AddIndexColumn(
+            Year_Month_Group,
+            "Month Rank",
+            1,
+            1,
+            Int64.Type
+        ),
+
+    ChooseColumns =
+        Table.SelectColumns(
+            Add_Month_Rank,
+            {"Table", "Month Rank"}
+        ),
+
+    ExpandedTable =
+        Table.ExpandTableColumn(
+            ChooseColumns,
+            "Table",
+            {
+                "Date Column",
+                "Year",
+                "Quarter Number",
+                "Month Number",
+                "Day Number",
+                "Month name",
+                "Quarter Name",
+                "Is Last Day"
+            },
+            {
+                "Date Column",
+                "Year",
+                "Quarter Number",
+                "Month Number",
+                "Day Number",
+                "Month name",
+                "Quarter Name",
+                "Is Last Day"
+            }
+        )
 in
-    Is_Future_Day
+    ExpandedTable
+
 ```
 
 After the creation of the table, the following steps need to be ensured to guarantee it works properly:
