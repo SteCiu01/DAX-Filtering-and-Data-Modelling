@@ -106,8 +106,6 @@ let
 
     // ============================================================
     // MONTH RANK LOGIC
-    // Assigns sequential rank to each Year–Month combination
-    // Useful for Top-N month filtering without relative date filters
     // ============================================================
     Year_Month_Group =
         Table.Group(
@@ -123,9 +121,9 @@ let
                         #"Quarter Number" = nullable number,
                         #"Month Number" = nullable number,
                         #"Day Number" = nullable number,
-                        #"Month name" = nullable text,
+                        #"Month Name" = nullable text,
                         #"Quarter Name" = nullable text,
-                        #"Is Last Day" = nullable text
+                        #"Is Future Day" = nullable text
                     ]
                 }
             }
@@ -140,15 +138,15 @@ let
             Int64.Type
         ),
 
-    ChooseColumns =
+    ChooseColumns_MonthRank =
         Table.SelectColumns(
             Add_Month_Rank,
             {"Table", "Month Rank"}
         ),
 
-    ExpandedTable =
+    Expanded_MonthRank =
         Table.ExpandTableColumn(
-            ChooseColumns,
+            ChooseColumns_MonthRank,
             "Table",
             {
                 "Date Column",
@@ -156,24 +154,71 @@ let
                 "Quarter Number",
                 "Month Number",
                 "Day Number",
-                "Month name",
+                "Month Name",
                 "Quarter Name",
-                "Is Last Day"
-            },
+                "Is Future Day"
+            }
+        ),
+
+    // ============================================================
+    // QUARTER RANK LOGIC (NEW)
+    // ============================================================
+    Year_Quarter_Group =
+        Table.Group(
+            Expanded_MonthRank,
+            {"Year", "Quarter Number"},
+            {
+                {
+                    "Table",
+                    each _,
+                    type nullable table[
+                        #"Date Column" = nullable date,
+                        Year = Int64.Type,
+                        #"Quarter Number" = nullable number,
+                        #"Month Number" = nullable number,
+                        #"Day Number" = nullable number,
+                        #"Month Name" = nullable text,
+                        #"Quarter Name" = nullable text,
+                        #"Is Future Day" = nullable text,
+                        #"Month Rank" = Int64.Type
+                    ]
+                }
+            }
+        ),
+
+    Add_Quarter_Rank =
+        Table.AddIndexColumn(
+            Year_Quarter_Group,
+            "Quarter Rank",
+            1,
+            1,
+            Int64.Type
+        ),
+
+    ChooseColumns_QuarterRank =
+        Table.SelectColumns(
+            Add_Quarter_Rank,
+            {"Table", "Quarter Rank"}
+        ),
+
+    ExpandedTable =
+        Table.ExpandTableColumn(
+            ChooseColumns_QuarterRank,
+            "Table",
             {
                 "Date Column",
                 "Year",
                 "Quarter Number",
                 "Month Number",
                 "Day Number",
-                "Month name",
+                "Month Name",
                 "Quarter Name",
-                "Is Last Day"
+                "Is Future Day",
+                "Month Rank"
             }
         )
 in
     ExpandedTable
-
 ```
 
 After the creation of the table, the following steps need to be ensured to guarantee it works properly:
