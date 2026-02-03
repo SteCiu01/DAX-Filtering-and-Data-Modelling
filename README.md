@@ -1,6 +1,6 @@
 # DAX, Filtering & Data Modelling
 
-This repository contains a collection of DAX code snippets, together with Data Modelling and Filtering best practices, and DAX user-defined functions. 
+This repository contains a collection of DAX codes, together with data modelling and filtering best practices. 
 
 These resources have been created during my work or for some personal projects, they are generally production-tested, and I find them quite interesting for their complexity or for their use case, to make them worthy to be shared here. 
 
