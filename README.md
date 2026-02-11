@@ -23,3 +23,32 @@ A comprehensive collection of production-tested DAX codes and data modelling tec
 [🧩 DAX UDFs](https://github.com/SteCiu01/DAX/blob/main/DAX-UDFs/README.md)
 
 Reusable function library for complex logic encapsulation (Coming Soon)
+
+---
+
+## Contributing
+
+Found a bug? Have an enhancement? Contributions are welcome!
+
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Commit your changes with clear descriptions
+4. Submit a pull request with detailed explanation
+
+---
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](./LICENSE) file for details.
+
+---
+
+## About This Repository
+
+These resources have been developed through real-world implementations across various use cases. Each pattern represents a solved problem that was complex enough to warrant documentation and reuse.
+
+The focus is on **practical, production-ready solutions** rather than theoretical examples — everything here has been used to solve actual business requirements in Power BI / Fabric environment.
+
+---
+
+**Repository Maintained by:** [Stefano Ciurlia](https://github.com/SteCiu01)
