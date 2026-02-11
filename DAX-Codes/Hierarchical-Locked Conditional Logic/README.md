@@ -1,4 +1,4 @@
-# Hierarchical Conditional Logic with Virtual Tables
+# Hierarchical-Locked Conditional Logic
 
 Apply conditional logic at a controlled hierarchical granularity using virtual tables and iterators.
 
