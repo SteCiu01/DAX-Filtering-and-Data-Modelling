@@ -1,6 +1,6 @@
 # DAX & Data Modelling
 
-> **A production-tested collection of DAX codes, data modelling techniques, and best practices for Power BI semantic models.**
+A production-tested collection of DAX codes, data modelling techniques, and best practices for Power BI semantic models.
 
 ## Overview
 
