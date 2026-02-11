@@ -1,4 +1,4 @@
-# Dynamic Visuals Headers
+# Context-Aware Visual Titles
 
 Generate visual titles and headers that automatically adapt to slicer selections
 
