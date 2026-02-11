@@ -1,4 +1,4 @@
-# Distinct Combination Counting via Virtual Tables
+# Distinct Combination Counting
 
 Resolve over-granularity issues by generating virtual tables at the desired level to count distinct item combinations.
 
