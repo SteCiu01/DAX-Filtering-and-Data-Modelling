@@ -6,65 +6,72 @@ Each code is fully documented with use cases, implementation steps, practical ex
 
 ---
 
-### Formatting
+# Visual Formatting & Presentation
 
-DAX techniques for implementing advanced and reusable custom formatting logic in Power BI visuals.
+Advanced DAX techniques for creating dynamic, professional-looking visuals with full control over formatting and conditional styling.
 
-| Topic | Description | Link |
-|---------|-------------|------|
-| Quick Colour Measures | Centralised colour measures to standardise and reuse colour logic across conditional formatting scenarios | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Colour%20Measures/README.md) |
-| Conditional Colour Driven by Slicer Selection | Apply dynamic colour formatting based on slicer-driven user selections | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Conditional%20Colour%20Driven%20by%20Slicer%20Selection/README.md) |
-| Traffic Light Target Indicators | Create traffic-light style indicators in tables and matrix visuals based on measure thresholds | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Traffic%20Light%20Target%20Indicators/README.md) |
-| Top-N / Bottom-N Conditional Colouring | Use RANKX-based logic to highlight Top-N or Bottom-N categories via conditional formatting | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Top-N%20-%20Bottom-N%20Conditional%20Colouring/README.md) |
-| Dynamic Visual Headers | Generate visual titles and headers that automatically adapt to slicer selections | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Dynamic%20Visuals%20Headers/README.md) |
-| SVG Rendering Inside Measures | Embed SVG images directly in DAX measures to enrich visuals with custom icons and indicators | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/SVG%20Rendering%20Inside%20Measures/README.md) |
-| Label Format Measures | Technique to achieve maximum customization and full control over data-label display, completely replacing the default Auto / Thousands / Millions behavior | [Link](https://github.com/SteCiu01/DAX-Filtering-and-Data-Modelling/blob/main/DAX-Codes/Label%20Format%20Measures/README.md) |
-
----
-
-### Filter Context
-
-Patterns and guidelines for managing complex filter interactions in DAX through proper model design and measures logic.
-
-| Topic | Description | Link |
-|---------|-------------|------|
-| Filter Context Handling via Data Model Design | Use data modelling techniques to consistently manage page-level, visual-level, slicer-level, and in-measure filtering on the same column | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Filter%20Context%20Handling%20via%20Data%20Model%20Design/README.md) |
+| Topic | Use Case | Link |
+|-------|----------|------|
+| **Centralized Color Definitions** | Create reusable color palette measures to standardize conditional formatting across reports | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Colour%20Measures/README.md) |
+| **Slicer-Driven Conditional Formatting** | Apply dynamic colors to visuals based on user slicer selections | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Conditional%20Colour%20Driven%20by%20Slicer%20Selection/README.md) |
+| **KPI Traffic Light Indicators** | Display status indicators (🟢🟠🔴) in tables and matrices based on performance thresholds | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Traffic%20Light%20Target%20Indicators/README.md) |
+| **RANKX-Based Highlighting** | Automatically highlight Top-N or Bottom-N items using conditional formatting | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Top-N%20-%20Bottom-N%20Conditional%20Colouring/README.md) |
+| **Context-Aware Visual Titles** | Generate dynamic headers that adapt to display selected filter values | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Dynamic%20Visuals%20Headers/README.md) |
+| **SVG Image Integration** | Embed vector graphics directly in DAX measures for custom icons and visual indicators | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/SVG%20Rendering%20Inside%20Measures/README.md) |
+| **Custom Data Label Formatting** | Override default label behavior with full control over K/M/B suffixes, decimals, and currency symbols | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Label%20Format%20Measures/README.md) |
 
 ---
 
-### Time Intelligence
+## Filter Context & Data Modelling
 
-A curated set of essential time intelligence patterns, supported by an optimised calendar table to ensure reliable and predictable results.
+Data model design topics for managing complex filter interactions and preventing common pitfalls when manipulating filter context.
 
-A complete and contiguous calendar table is a prerequisite for correct time intelligence calculations, with no missing dates from start to end.
-
-| Topic | Description | Link |
-|---------|-------------|------|
-| Calendar Table Construction | Power Query (M) code to generate a complete calendar table for the semantic model, including a future date for proper SPLY calculations | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Calendar%20Table%20Construction/README.md) |
-| Reusable Time Intelligence Measures | A collection of commonly used time intelligence measures, ready to be imported via DAX Query View | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Reusable%20Time%20Intelligence%20Measures/README.md) |
+| Topic | Use Case | Link |
+|-------|----------|------|
+| **Dimension Table Isolation Pattern** | Prevent filter context conflicts by using lookup tables instead of fact table columns in CALCULATE expressions | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Filter%20Context%20Handling%20via%20Data%20Model%20Design/README.md) |
 
 ---
 
-### Control
+## Time Intelligence
 
-Control measures used in visuals and navigation elements to dynamically manage what users see and interact with based on defined conditions.
+Essential time-based calculation topics built on a robust calendar table foundation to ensure accurate and reliable period comparisons.
 
-| Topic | Description | Link |
-|---------|-------------|------|
-| Slicers Filtering Other Slicers | Use control measures to remove invalid slicer values and prevent misleading or empty visuals | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Slicer-Filtering-Other-Slicers/README.md) |
-| Measures Controlling Slicer Values | Synchronise slicers and visuals to avoid slicers displaying values excluded by visual-level logic | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Measures%20Controlling%20Slicer%20Values/README.md) |
-| Visual Filtering by Measures | Enable users to filter visuals dynamically based on quantitative measures (e.g. revenue, margin, volume) | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Visual%20Filtering%20by%20Measures/README.md) |
-| Dynamic Top-N Selection | Create a numeric input slicer that dynamically controls the Top-N entities displayed in a visual | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Dynamic%20Top-N%20Selection/README.md) |
-| Page-Level Access Control (UI-Based) | Restrict navigation to specific report pages for non-authorised users and redirect them to an access request page | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Page-Level%20Access%20Control%20(UI-Based)/README.md) |
+| Topic | Use Case | Link |
+|-------|----------|------|
+| **Optimized Calendar Table** | Power Query (M) code to generate a complete date dimension with rank columns and future date handling for SPLY calculations | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Calendar%20Table%20Construction/README.md) |
+| **Standard Time Functions Library** | Pre-built YTD, SPLY, prior period measures ready for import via DAX Query View | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Reusable%20Time%20Intelligence%20Measures/README.md) |
+
+**Critical Requirement:** All time intelligence topics depend on a complete calendar table with no gaps between start and end dates. Use the provided construction topic to avoid calculation errors.
 
 ---
 
-### Virtual Tables
+## Interactive Controls & Dynamic Filtering
 
-Advanced calculation patterns based on in-measure virtual tables, enabling solutions that are not achievable with simple aggregation measures.
+Measures and techniques for creating interactive user experiences with slicers, filters, and conditional navigation.
 
-| Topic | Description | Link |
-|---------|-------------|------|
-| Hierarchical Conditional Logic with Virtual Tables | Apply conditional logic at a controlled hierarchical granularity using virtual tables and iterators | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Hierarchical%20Conditional%20Logic%20with%20Virtual%20Tables/README.md) |
-| Distinct Combination Counting via Virtual Tables | Resolve over-granularity issues by generating virtual tables at the desired level to count distinct item combinations | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Distinct%20Combination%20Counting%20via%20Virtual%20Tables/README.md) |
+| Topic | Use Case | Link |
+|-------|----------|------|
+| **Cross-Slicer Value Filtering** | Remove invalid slicer options based on other slicer selections to prevent empty visuals | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Slicer-Filtering-Other-Slicers/README.md) |
+| **Visual-Slicer Synchronization** | Keep slicers aligned with visual-level filters to avoid showing excluded values | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Measures%20Controlling%20Slicer%20Values/README.md) |
+| **Measure-Based Range Filtering** | Enable dynamic filtering by quantitative thresholds (e.g., revenue ranges, margin brackets) | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Visual%20Filtering%20by%20Measures/README.md) |
+| **Parameter-Driven Top-N** | Create numeric input slicers for interactive Top-N/Bottom-N filtering with user-defined thresholds | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Dynamic%20Top-N%20Selection/README.md) |
+| **Conditional Page Navigation** | Restrict report page access based on Azure AD group membership with automatic redirection | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Page-Level%20Access%20Control%20(UI-Based)/README.md) |
+
+---
+
+## Virtual Tables & Advanced Calculations
+
+In-memory table techniques for calculations that cannot be solved with standard aggregation measures.
+
+| Topic | Use Case | Link |
+|-------|----------|------|
+| **Grain-Locked Conditional Logic** | Apply conditional logic at a specific hierarchical level regardless of visual drill state | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Hierarchical%20Conditional%20Logic%20with%20Virtual%20Tables/README.md) |
+| **Distinct Combination Counting** | Count unique combinations at controlled granularity using SUMMARIZE to avoid over-counting | [Link](https://github.com/SteCiu01/DAX/blob/main/DAX-Codes/Distinct%20Combination%20Counting%20via%20Virtual%20Tables/README.md) |
+
+### 🛠️ Implementation Notes: When to Use Virtual Tables
+
+Virtual tables are required when:
+- Logic must execute **before** visual aggregation
+- You need to control calculation grain independent of filter context
+- Standard CALCULATE topics produce incorrect results due to row-level dependencies
 
