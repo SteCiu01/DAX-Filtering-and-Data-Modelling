@@ -1,4 +1,4 @@
-# Quick Colour Measures
+# Centralized Color Definitions
 
 Here below some standard colour measures that can be used to have easy access to colours when building custom formatting logics.
 
