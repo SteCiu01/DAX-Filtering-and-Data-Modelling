@@ -1,4 +1,4 @@
-# Conditional Colour Driven by Slicer Selection
+# Slicer-Driven Conditional Formatting
 
 Apply dynamic colour formatting based on slicer-driven user selections
 
