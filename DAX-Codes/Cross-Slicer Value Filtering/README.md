@@ -1,4 +1,4 @@
-# Slicers Filtering Other Slicers
+# Cross-Slicer Value Filtering
 
 Use control measures to remove invalid slicer values and prevent misleading or empty visuals.
 
