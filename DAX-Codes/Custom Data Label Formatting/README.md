@@ -1,4 +1,4 @@
-# Label Format Measures
+# Custom Data Label Formatting
 
 Technique to achieve maximum customization and full control over data-label display, completely replacing the default Auto / Thousands / Millions behavior.
 
